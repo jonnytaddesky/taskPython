@@ -1,6 +1,8 @@
-n = int(input('Enter number: '))
-a = int(input('Enter power: '))
+number = int(input('Enter number: '))
+power = int(input('Enter power: '))
 
-for i in range(a):
-     n *= n
-print(n)
+result = 1
+
+for i in range(power):
+     result *= number
+print(result)
