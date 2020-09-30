@@ -12,18 +12,18 @@ def watermark_text(input_image_path,
     drawing = ImageDraw.Draw(photo)
  
     red = (255, 0, 0)
-    font = ImageFont.truetype("consolas.ttf", 40)
+    font = ImageFont.truetype("font/consolas.ttf", 40)
     drawing.text(pos, text, fill=red, font=font)
     photo.show()
     photo.save(output_image_path)
  
  
 if __name__ == '__main__':
-    img = 'main.jpg'
+    img = 'img/main.jpg'
     
-    base = Image.open('main.jpg')
+    base = Image.open('img/main.jpg')
     width, height = base.size
     
-    watermark_text(img, 'main_watermarked.jpg',
+    watermark_text(img, 'img/main_watermarked.jpg',
                    text='Abitant',
                    pos=(height/2, width/2))
